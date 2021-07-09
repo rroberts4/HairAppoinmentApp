@@ -3,8 +3,7 @@ An application which allows clients to schedule hair appointments with their bar
 
 //
 // Title:           HairAppointmentApp
-// Main Class File: HairAppointmentApp.Main.java
-// File:            AppointmentCalendarSceneController.java
+
 // Date:            June 2021
 //
 // Author:          Ryan Jordan Roberts
