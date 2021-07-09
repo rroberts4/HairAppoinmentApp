@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HairAppointmentApp.HomeScreenSceneController">
+    <left>
+        <AnchorPane prefHeight="507.0" prefWidth="228.0" style="-fx-background-color: #ecece7;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="610.0" fitWidth="273.0" layoutX="-4.0" layoutY="-3.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/greybackground.jpg" />
+                    </image></ImageView>
+                <Label layoutX="27.0" layoutY="90.0" prefHeight="41.0" prefWidth="185.0" text=" Hair Appointmnet">
+                    <font>
+                        <Font name="Britannic Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label alignment="TOP_CENTER" layoutX="27.0" layoutY="125.0" prefHeight="41.0" prefWidth="185.0" text="System">
+                    <font>
+                        <Font name="Britannic Bold" size="22.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="413.0" fitWidth="207.0" layoutX="27.0" layoutY="178.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/hairicon_2.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="451.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="messageLabel" layoutX="54.0" layoutY="196.0" prefHeight="18.0" prefWidth="221.0" textFill="#f20b0b" />
+            <Label alignment="CENTER" layoutX="4.0" layoutY="59.0" prefHeight="41.0" prefWidth="443.0" text="BOOK YOUR APPOINTMENT">
+               <font>
+                  <Font name="Britannic Bold" size="32.0" />
+               </font>
+            </Label>
+            <VBox layoutX="31.0" layoutY="103.0" prefHeight="227.0" prefWidth="399.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="109.0" text="BARBER SERVICES">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="barberServicesComboBox" prefHeight="25.0" prefWidth="300.0" />
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="399.0">
+                     <children>
+                        <Label fx:id="barberServiceLabel" prefHeight="40.0" prefWidth="395.0" />
+                     </children>
+                  </HBox>
+                  <Label prefHeight="36.0" prefWidth="134.0" text="ADDITIONAL SERVICES">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="addServicesComboBox" prefHeight="25.0" prefWidth="300.0" />
+                  <Label prefHeight="36.0" prefWidth="52.0" text="BARBER">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="barberComboBox" prefHeight="25.0" prefWidth="300.0" />
+               </children>
+            </VBox>
+            <VBox fx:id="userInfoVBox" layoutX="31.0" layoutY="387.0" prefHeight="203.0" prefWidth="306.0" spacing="10.0" visible="false">
+               <children>
+                  <TextField fx:id="firstNameTextfield" promptText="First Name" />
+                  <TextField fx:id="lastNameTextfield" promptText="Last Name" />
+                  <TextField fx:id="emailTextfield" promptText="Email" />
+                  <TextField fx:id="phoneTextfield" layoutX="10.0" layoutY="60.0" promptText="Phone Number" />
+                  <Label fx:id="errorMessageLabel" prefHeight="17.0" prefWidth="307.0" textFill="#f40404">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <Button fx:id="appointmentButton" mnemonicParsing="false" onAction="#appointmentButtonAction" prefHeight="25.0" prefWidth="306.0" text="BOOK YOUR APPOINTMENT" />
+               </children>
+            </VBox>
+            <Label fx:id="userInfoLabel" alignment="TOP_LEFT" layoutX="30.0" layoutY="344.0" prefHeight="28.0" prefWidth="422.0" text="USER INFORMATION" visible="false">
+               <font>
+                  <Font name="Britannic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginLabel" layoutX="14.0" layoutY="12.0" onMouseClicked="#barberLoginLabelClicked" prefHeight="17.0" prefWidth="102.0" text="BARBER LOGIN">
+               <font>
+                  <Font name="Britannic Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="exitLabel" layoutX="414.0" onMouseClicked="#exitLabelClicked" prefHeight="29.0" prefWidth="33.0" text="EXIT">
+               <font>
+                  <Font name="Britannic Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="confirmButton" layoutX="348.0" layoutY="318.0" mnemonicParsing="false" onAction="#confirmButtonAction" prefHeight="25.0" prefWidth="85.0" text="CONFIRM" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

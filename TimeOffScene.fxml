@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HairAppointmentApp.TimeOffSceneController">
+    <left>
+        <AnchorPane prefHeight="507.0" prefWidth="228.0" style="-fx-background-color: #ecece7;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="610.0" fitWidth="273.0" layoutX="-4.0" layoutY="-3.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/greybackground.jpg" />
+                    </image></ImageView>
+                <Label layoutX="27.0" layoutY="90.0" prefHeight="41.0" prefWidth="185.0" text=" Hair Appointmnet">
+                    <font>
+                        <Font name="Britannic Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label alignment="TOP_CENTER" layoutX="27.0" layoutY="125.0" prefHeight="41.0" prefWidth="185.0" text="System">
+                    <font>
+                        <Font name="Britannic Bold" size="22.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="413.0" fitWidth="207.0" layoutX="27.0" layoutY="178.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/hairicon_2.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="451.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="4.0" layoutY="62.0" prefHeight="41.0" prefWidth="443.0" text="Time Off Request">
+                    <font>
+                        <Font name="Britannic Bold" size="32.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER" layoutX="14.0" layoutY="109.0" prefHeight="42.0" prefWidth="433.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="106.0" text="CHOOSE A DATE" />
+                        <DatePicker fx:id="datePicker" onAction="#setDate" prefHeight="25.0" prefWidth="315.0" promptText="Enter a Date" />
+                    </children>
+                </HBox>
+                <Label fx:id="backLabel" layoutX="411.0" layoutY="1.0" onMouseClicked="#backLabelClicked" prefHeight="22.0" prefWidth="40.0" text="BACK">
+                    <font>
+                        <Font name="Britannic Bold" size="15.0" />
+                    </font>
+                </Label>
+            <Button fx:id="confirmButton" layoutX="206.0" layoutY="160.0" mnemonicParsing="false" onAction="#confirmButtonAction" prefHeight="18.0" prefWidth="231.0" text="Confirm Time Off Requst" />
+            <Label fx:id="messageLabel" layoutX="9.0" layoutY="214.0" prefHeight="31.0" prefWidth="425.0" />
+            <VBox layoutX="14.0" layoutY="270.0" prefHeight="236.0" prefWidth="427.0">
+               <children>
+                  <TableView fx:id="clientTableView" prefHeight="296.0" prefWidth="427.0" visible="false">
+                    <columns>
+                      <TableColumn fx:id="clientName" prefWidth="139.0" text="Name" />
+                        <TableColumn fx:id="clientEmail" prefWidth="133.0" text="Email" />
+                        <TableColumn fx:id="clientPhone" prefWidth="154.3333740234375" text="Phone" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <Button fx:id="requestButton" layoutX="101.0" layoutY="533.0" mnemonicParsing="false" onAction="#requestButtonAction" prefHeight="25.0" prefWidth="91.0" text="New Request" />
+            <Button fx:id="exitButton" layoutX="296.0" layoutY="533.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="25.0" prefWidth="58.0" text="EXIT" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

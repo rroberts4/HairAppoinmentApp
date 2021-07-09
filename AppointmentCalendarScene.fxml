@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HairAppointmentApp.AppointmentCalendarSceneController">
+    <left>
+        <AnchorPane prefHeight="507.0" prefWidth="228.0" style="-fx-background-color: #ecece7;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="610.0" fitWidth="273.0" layoutX="-4.0" layoutY="-3.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/greybackground.jpg" />
+                    </image></ImageView>
+                <Label layoutX="27.0" layoutY="90.0" prefHeight="41.0" prefWidth="185.0" text=" Hair Appointmnet">
+                    <font>
+                        <Font name="Britannic Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label alignment="TOP_CENTER" layoutX="27.0" layoutY="125.0" prefHeight="41.0" prefWidth="185.0" text="System">
+                    <font>
+                        <Font name="Britannic Bold" size="22.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="413.0" fitWidth="207.0" layoutX="27.0" layoutY="178.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/hairicon_2.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="451.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="4.0" layoutY="62.0" prefHeight="41.0" prefWidth="443.0" text="BOOK YOUR APPOINTMENT">
+                    <font>
+                        <Font name="Britannic Bold" size="32.0" />
+                    </font>
+                </Label>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="109.0" prefHeight="42.0" prefWidth="433.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="106.0" text="CHOOSE A DATE" />
+                  <DatePicker fx:id="datePicker" onAction="#setDate" prefHeight="25.0" prefWidth="315.0" promptText="Enter a Date" />
+               </children>
+            </HBox>
+            <VBox layoutX="14.0" layoutY="213.0" prefHeight="373.0" prefWidth="427.0" spacing="20.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="22.0">
+                     <children>
+                        <Button fx:id="tenAMButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#tenAMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="10AM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="elevenAMButton" alignment="CENTER" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#elevenAMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="11AM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="twelvePMButton" alignment="CENTER" disable="true" layoutX="108.0" layoutY="10.0" mnemonicParsing="false" onAction="#twelvePMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="12PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="onePMButton" alignment="CENTER" disable="true" layoutX="108.0" layoutY="10.0" mnemonicParsing="false" onAction="#onePMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="1PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="22.0">
+                     <children>
+                        <Button fx:id="twoPMButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#twoPMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="2PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="threePMButton" alignment="CENTER" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#threePMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="3PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="fourPMButton" alignment="CENTER" disable="true" layoutX="108.0" layoutY="10.0" mnemonicParsing="false" onAction="#fourPMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="4PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="fivePMButton" alignment="CENTER" disable="true" layoutX="108.0" layoutY="10.0" mnemonicParsing="false" onAction="#fivePMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="5PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="114.0" prefHeight="100.0" prefWidth="200.0" spacing="22.0">
+                     <children>
+                        <Button fx:id="sixPMButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#sixPMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="6PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sevenPMButton" alignment="CENTER" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sevenPMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="7PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eightPMButton" alignment="CENTER" disable="true" layoutX="108.0" layoutY="10.0" mnemonicParsing="false" onAction="#eightPMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="8PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="ninePMButton" alignment="CENTER" disable="true" layoutX="108.0" layoutY="10.0" mnemonicParsing="false" onAction="#ninePMButtonAction" prefHeight="98.0" prefWidth="90.0" style="-fx-background-color: BLACK;" text="9PM" textFill="#fdfcfc">
+                           <font>
+                              <Font name="Bodoni MT Black" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="4.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="confirmButton" layoutX="325.0" layoutY="151.0" mnemonicParsing="false" onAction="#confirmButtonAction" prefHeight="25.0" prefWidth="104.0" text="Confirm Date" visible="false" />
+            <Label fx:id="timeMessageLabel" alignment="CENTER" layoutX="4.0" layoutY="179.0" prefHeight="25.0" prefWidth="443.0" text="CHOOSE A TIME" visible="false">
+               <font>
+                  <Font name="Britannic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="backLabel" layoutX="411.0" layoutY="1.0" onMouseClicked="#backLabelClicked" prefHeight="22.0" prefWidth="40.0" text="BACK">
+               <font>
+                  <Font name="Britannic Bold" size="15.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
